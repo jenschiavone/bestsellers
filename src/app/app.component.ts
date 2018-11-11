@@ -14,10 +14,9 @@ import { BooksService } from './books/books.service';
 })
 export class AppComponent {
   // query: string;
-  // books: Book[];
   // currentBook: Book;
   private booksUrl = environment.booksApiBaseUrl;
-  data: any = {};
+  bestsellers: Book[];
 
   // showBook(book) {
   //   this.query = '';
@@ -44,7 +43,7 @@ export class AppComponent {
   getBooks() {
     this.getData().subscribe(data => {
       console.log(data);
-      this.data = data
+      this.bestsellers = data
     })
   }
 }
