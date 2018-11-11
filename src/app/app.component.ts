@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http'
 import { Observable } from 'rxjs/Rx'
 import 'rxjs/add/operator/map';
+import { environment } from '../environments/environment';
 
 import { Book } from './books/book';
 import { BooksService } from './books/books.service';
@@ -15,7 +16,7 @@ export class AppComponent {
   // query: string;
   // books: Book[];
   // currentBook: Book;
-  private booksUrl = 'http://localhost:3000';
+  private booksUrl = environment.booksApiBaseUrl;
   data: any = {};
 
   // showBook(book) {
