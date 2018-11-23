@@ -1,23 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+
+import { AppRoutingModule } from './app-routing.module';
+import { UiModule } from './ui/ui.module';
 
 import { AppComponent } from './app.component';
-import { BooksComponent } from './books/books.component';
-import { BooksService } from './books/books.service';
+import { BooksService } from './ui/books/books.service';
 import { SearchBooksPipe } from './search-books.pipe';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    BooksComponent,
     SearchBooksPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    ReactiveFormsModule,
+    HttpModule,
+    AppRoutingModule,
+    UiModule,
+    HttpClientModule
   ],
   providers: [BooksService],
   bootstrap: [AppComponent]

@@ -1,14 +1,5 @@
+<app-header></app-header>
 <div>
-  <h3>Bestsellers</h3>
+<router-outlet></router-outlet>
 </div>
-
-<div>
-  <ng-container *ngFor="let book of bestsellers">
-      <div>
-        <p>{{book.title}} {{book.author}}</p>
-      </div>
-      <hr>
-  </ng-container>  
-
-</div>
-
+<app-footer></app-footer>

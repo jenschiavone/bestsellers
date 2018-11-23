@@ -1,0 +1,31 @@
+<div class="form-group">
+  <p>Get bestsellers by genre</p>
+<select [(ngModel)]="bookListItem" (ngModelChange)="onGenreSelected($event)" 
+class="custom-select custom-select-sm" style="width:auto;">
+  <option 
+  *ngFor="let bookListItem of bookListItems" 
+  [value]="bookListItem.list_name_encoded">
+    {{ bookListItem.display_name }}
+  </option>
+</select>
+</div>
+<div *ngIf="bestsellers">
+  <ng-container>
+  	<table class="table table-sm table-striped">
+  		<thead class="thead-dark">
+  			<th>Rank</th> 			
+  			<th>Title</th>
+  			<th>Author</th>
+  			<th>Rank Last Week</th>
+  			<th>Weeks on List</th>
+  		</thead>
+  		<tr *ngFor="let book of bestsellers">
+  			<td>{{ book.rank }}</td>
+  			<td>{{ book.title }}</td>
+  			<td>{{ book.author }}</td>
+  			<td>{{ book.rank_last_week }}</td>
+  			<td>{{ book.weeks_on_list }}</td>
+  		</tr>
+  	</table>
+  </ng-container>  
+</div>
