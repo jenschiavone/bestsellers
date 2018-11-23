@@ -15,6 +15,7 @@ export class BooksComponent implements OnInit {
 
   bestsellers: Book[];
   bookListItems: BookListItem[];
+  bookListItem: BookListItem;
 
   constructor(private booksService: BooksService) {}
 
