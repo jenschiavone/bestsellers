@@ -9,13 +9,11 @@ import { UiModule } from './ui/ui.module';
 
 import { AppComponent } from './app.component';
 import { BooksService } from './ui/books/books.service';
-import { SearchBooksPipe } from './search-books.pipe';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SearchBooksPipe
+    AppComponent
   ],
   imports: [
     BrowserModule,

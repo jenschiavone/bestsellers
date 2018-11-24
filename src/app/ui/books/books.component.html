@@ -1,14 +1,15 @@
 <div class="form-group">
-  <p>Get bestsellers by genre</p>
-<select [(ngModel)]="bookListItem" (ngModelChange)="onGenreSelected($event)" 
-class="custom-select custom-select-sm" style="width:auto;">
-  <option 
-  *ngFor="let bookListItem of bookListItems" 
-  [value]="bookListItem.list_name_encoded">
-    {{ bookListItem.display_name }}
-  </option>
-</select>
+  <select [(ngModel)]="bookListItem" (ngModelChange)="onGenreSelected($event)" 
+  class="custom-select custom-select-sm" style="width:auto;">
+    <option value="0">Please select a genre</option>
+    <option 
+    *ngFor="let bookListItem of bookListItems" 
+    [value]="bookListItem.list_name_encoded">
+      {{ bookListItem.display_name }}
+    </option>
+  </select>
 </div>
+
 <div *ngIf="bestsellers">
   <ng-container>
   	<table class="table table-sm table-striped">
