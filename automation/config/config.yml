@@ -1,0 +1,2 @@
+driver: 'watir'
+switches: "%w[--disable-background-networking]"

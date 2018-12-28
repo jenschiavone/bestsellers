@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  booksApiBaseUrl: 'http://localhost:3000/books/genre/'
+  booksApiBaseUrl: 'http://localhost:8080/books/genre/'
 };
 
 /*
