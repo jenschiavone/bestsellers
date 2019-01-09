@@ -1,2 +1,2 @@
-default: --format pretty --format html --out cucumber.html
-json: --format json --out cucumber.json
+default: --format pretty --format html --out reports/cucumber.html
+json: --format json --out reports/cucumber.json

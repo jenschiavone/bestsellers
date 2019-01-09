@@ -1,5 +1,5 @@
 When("I visit the bestseller page") do
-  @site = Bestsellers.new
+  # @site = Bestsellers.new
 end
 
 Then("I should see the app title") do
@@ -15,6 +15,6 @@ When("I choose to view the Hardcover Fiction list") do
 end
 
 Then("I should see the list of Hardcover Fiction books") do
-  raise('danger! danger!')
+  # raise('danger! danger!')
   expect(@site.home_page.book_titles).to eq @book_list.books.collect(&:title)
 end
